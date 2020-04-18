@@ -1,0 +1,10 @@
+---
+layout: articleview
+title:  "Welcome"
+date:   2020-04-15 09:53:35 +0530
+categories: article
+description: hello jekyll blogging
+
+---
+njcnjknckjnckjnckdnckd
+nckdnckjncjknkjcnjkcn

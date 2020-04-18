@@ -1,0 +1,92 @@
+---
+layout: default
+---
+    
+    <div class="banner">
+      <img src="assets/banner.jpg">
+      
+    </div>
+
+      <div class="tab-view" id="tabview">
+                <div class="tab-bar">
+                          <center>
+                              <button class="tabcontroller" onclick="article()">
+                                Articles<div class="border" id="border"></div>
+                              </button>
+                            <button class="tabcontroller" onclick="quotes()">Quotes</button>
+                            </center>
+                  </div>   
+
+                  <div class="quotes" id="quotes">
+                      
+                      {% for post in site.categories.quotes %}
+
+                      <div class="content">
+                          <img src="assets/quote.png" class="quote">
+                          
+                          <p>
+                            <i> {{ post.content }}</i>
+                          </p>
+                          
+                          <img src="assets/quote.png" class="quote" style="transform:scale(-1,-1);margin-left:auto;">
+                      </div>
+                      {% endfor %}
+                      
+                  </div>
+
+                    <div class="article .active" id="article">
+
+                        {% for post in site.categories.article %}
+
+                          <div class="content article_post">
+                              <div class="title">
+                                  <img src="assets/img5.jpg" alt="logo" class="title-logo">     
+                                  <p>
+                                    <span class="name">Sharan suresh</span><br>
+                                    {{ post.date | date:'%B %d, %Y' }}
+                                  </p>                        
+                                </div>
+                              
+                                     <p style="margin:15px;text-align: left;"> {{ post.description }}</p>
+                                  
+                                    <a href="{{ post.url }}" style="margin:15px;text-decoration: none;color:grey">Read more...</a>
+                            </div>
+                            <div class="section">
+
+                            </div>
+                            {% endfor %}
+                      </div>  
+
+                      <div class="about">
+                        <center><img src="assets/img1.jpg" class="profile" alt="photo"></center>
+                        <p>                            "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          "</p>
+                
+                          
+                      </div>
+                      <div class="contact">
+                          <h4>Contact</h4>
+                        <p>
+                          <br><br>Phone: +91 987654321<br><br>
+                          Mail:sharansureshkv99@gmail.com<br><br>
+                        </p>
+                       
+                        <center>
+                        <img src="assets/fb.svg" alt="" class="social">
+                        <img src="assets/tw.svg" alt="" class="social">
+                        <img src="assets/insta.svg" alt="" class="social">
+                        <img src="assets/wt.svg" alt="" class="social">
+                        </center>
+
+                      </div>
+      </div>
+
+
+    
+
+        
+               
+    
+</body>
+<script src="assets/main.js"></script>
+</html>
