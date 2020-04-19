@@ -314,7 +314,7 @@ h4{
 }
 @media only screen and (min-width:700px){
     html,body{
-        diplay:none;
+        display:none;
     }
 
     header{
